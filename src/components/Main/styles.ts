@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Warpper = styled.main`
+export const Wrapper = styled.main`
     align-items: center;
     background-color: #060926;
     color: #fff;

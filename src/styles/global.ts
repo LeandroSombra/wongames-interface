@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -9,6 +9,18 @@ const GlobalStyles = createGlobalStyle`
       -moz-osx-font-smoothing: grayscale;
   }
 
+  
+  ${({ theme }) => css`
+      html {
+          font-size: 62.5%;
+      }
+
+      body {
+          background-color: ${theme.colors.lightGray};
+          font-family: ${theme.font.family};
+          font-size: ${theme.font.sizes.medium};
+      }
+  `}
 
   @font-face {
     font-family: 'Poppins';
@@ -38,20 +50,6 @@ const GlobalStyles = createGlobalStyle`
     src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
         url('/fonts/poppins-v15-latin-600.woff2') format('woff2'), 
         
-  }
-
-  html {
-    font-size: 62.5%;
-  }
-
-  html,
-  body,
-  #__next {
-    height: 100%;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
   }
 
 `
